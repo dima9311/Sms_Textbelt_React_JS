@@ -1,0 +1,30 @@
+
+.top-buttons{position:absolute; top:0.8em; left:-0.4em; font-size:0.2em;}
+
+.btn-my{border:1px solid white;}
+.btn-next{margin-left:0.2em;}
+
+.shadowX {
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -23px 0 20px -23px rgba(0, 0, 0, .6), 23px 0 20px -23px rgba(0, 0, 0, .6), inset 0 0 40px rgba(0, 0, 0, .1); 
+}
+
+  
+  /* Class that sets background-image with animation */
+.change-head-style{
+	/*color:white; */
+	/*background-color:lavender; padding:10px;*/
+	/*background-image: url('../images/back.jpg') ; */  
+	/*text-shadow: 1px 1px 2px black, 0 0 1em red;*/ /* Shadow params */
+	/* background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); */
+	
+	-webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+     transition: all 1.5s ease;
+}
+
+
+
+ /* Class for button "Test Mode" toggle */
+.btn-test-mode {background: red;  -webkit-transition: 0.1s linear;   }
+.btn-dev-mode {background: #10e649; border:2px solid white; -webkit-transition: 0.1s linear; } /* green */

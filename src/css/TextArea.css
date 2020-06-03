@@ -1,0 +1,167 @@
+/* Submit and clear buttons */
+.buttonsX {margin-top:1em;  }
+.buttonsX .el{
+	float: left; 
+    margin-left:0.1em; margin-bottom:0.2em;
+	border: 1px solid white;
+	}
+
+
+/* working!!! */
+.buttonsX .el :after {
+    clear: both;
+}
+
+/* Count sms text length */
+.text-shadow{text-shadow: 1px 0 7px #FFF;}
+
+.shadow-xx{box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -23px 0 20px -23px rgba(0, 0, 0, .6), 23px 0 20px -23px rgba(0, 0, 0, .6), inset 0 0 40px rgba(0, 0, 0, .1); }
+
+.shadow-text{
+  color: #444444;
+  background: #FFFFFF;
+  text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+}
+
+
+
+ /* --------------------------------------- <DisplayPhoneRegExpMessage/> ---------------------------- */
+.err-mess-wrong {background:red; }     /* Message => {IMCOMPLETE UA NUMBER}  -webkit-transition:  .1s linear; */
+.err-mess-ok    {background:#10e649; } /* green */ /* Message => {NUMBER IS OK}   -webkit-transition:  .1s linear; */
+.phone-error{ padding:0.1em 0.5em; margin-bottom:3em; border: 1px solid white; border-radius:2px;}
+
+.err-message-div{margin-bottom: 0.6em;} /* Div with messages {IMCOMPLETE UA NUMBER}/{NUMBER IS OK} */
+
+.textarea-my{
+	width:100%;
+	margin-top:0;
+	/* padding: 2em; */
+}
+
+
+
+/* --------------------------------------- <AjaxLoader/> ---------------------------- */
+/* ajax loader, works on click */
+.ajax-loader{position:absolute; top:23em; left:0.5%; display:none;}
+.ajax-loader img{width:18%;}
+
+/*  ----------------Mobile */
+@media screen and (max-width: 640px) {
+	.ajax-loader{position:absolute; top:28.6em; left:3%;display:none;}
+    .ajax-loader img{width:45%;}
+}  
+ 
+/*  ----------------Mobile */
+
+
+
+
+
+/* ----------------------------------------- <ResultFromTextbeltApi/> ----------------- */
+/* displays response from textBelt Api */
+
+/* show/hide All response/answer block, works based on this.state.ifUserClickedSendSms, set in <TextArea/. and passes as props to <ResultFromTextbeltApi/> */
+.hide-div{  display:none; height:0;     -webkit-transition:  4.5s linear;  transition:  4.5s linear; border-radius:1em;}
+.show-div{  display:block; height:auto;  -webkit-transition:  4.5s linear; transition:  4.5s linear; border-radius:1em;}
+
+.textbelt-answer{
+	  border:1px solid white; padding:0.5em; margin-top:0.9em;
+      -webkit-transition:  1.5s linear; margin:0 auto; 
+	  word-wrap: break-word;
+	  border-radius:1em;}
+
+/* Div to show "Sms sent"/"Sms was not sent" */	  
+.sms-sent{background:#10e649;} /* green */ 
+.sms-not-sent{background:red;}
+
+/* button to show/hide delivery check status */
+.show-delivery-button{display:block;}
+.hide-delivery-button{display:none;}
+
+.el{border:1px solid white; margin:0.2em 0em; ;}
+.font-small{font-size:0.8em;}
+
+
+/* Div to show/hide delivery check status */
+.del-st{ margin-top:0.3em; color:white;}.
+.temp{background:yellow !important;}
+
+.deliv-ok  {background:#10e649; } /* green */ 
+.deliv-fail{background:red;     }
+
+
+
+/* Creating CSS overlay over Div with delivery status text -> imitation of  $(".del-st").stop().fadeOut("slow",function(){ $(this).html(finalText) }).fadeIn(3000); */
+/* Parent div that contains Delivery status text */
+.parent-div {
+  /*background-color: red;*/
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Overlay to show when running Delivery check function, invisible by default */
+.child-div {
+  background-color: yellow;
+  height: 100%;
+  position: absolute; top:0px;left:0px;
+  width: 100%;
+  z-index: 999;
+  border-radius:1em;
+  opacity:0;
+  -webkit-transition:  0.5s linear; transition:  0.5s linear;
+}
+.delivery-loader{width:10%}
+
+
+
+
+
+
+/* Creating CSS overlay over Div with Sms Results i.e{Sent/Not sent} -> imitation of  $(".del-st").stop().fadeOut("slow",function(){ $(this).html(finalText) }).fadeIn(3000); */
+/* Parent div that contains Sms Results i.e{Sent/Not sent} */
+.parent-div-sms {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Overlay to show when running Sending sms, invisible by default */
+.child-div-sms {
+  background-color: yellow;
+  height: 100%;
+  position: absolute; top:0px;left:0px;
+  width: 100%;
+  z-index: 999;
+  border-radius:1em;
+  opacity:0;
+  -webkit-transition:  0.5s linear; transition:  0.5s linear;
+}
+.delivery-loader-sms{width:20%}
+
+
+
+/* ----------------------------------------- END <ResultFromTextbeltApi/> ----------------- */
+
+
+#coordsInput{width:100%;}
+
+.textarea-my .btn{
+  display:block;
+
+}
+
+#resultFinal{padding:2em;} /* padding in div */
+
+
+.blur{
+	transition-duration: 1s;
+	-moz-filter: blur(15px);
+     -ms-filter: blur(15px);
+     -o-filter: blur(15px);
+     -webkit-filter: blur(15px);
+     filter: blur(15px);
+	}
+	

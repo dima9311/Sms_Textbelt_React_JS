@@ -1,0 +1,28 @@
+/* flash message */
+.flash-message{
+	color:red;
+	font-size:14em;
+	position:absolute;
+	top: 0px;
+	display:none;
+    text-shadow: 2px 2px #FFF;
+	} 
+
+
+	
+	
+/*  ----------------Mobile */
+@media screen and (max-width: 640px) {
+	
+   .flash-message{
+		position:absolute; top:4.6em;
+		font-size:4em;
+		left:0.1em;
+	}
+	
+
+}  
+ 
+/*  ----------------Mobile */
+	
+	
