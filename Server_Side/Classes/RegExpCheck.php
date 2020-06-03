@@ -2,8 +2,6 @@
 //Server regExp check for phone number and sms text
 namespace MySmsTetxBelt\Classes;
 
-
-
 class RegExpCheck 
 {
     public function check($phoneNumber, $sms_text)
@@ -26,7 +24,6 @@ class RegExpCheck
 	        } else {
 		        $checkedResult['errorPhone'] = 'EU Phone number is Good';}
         }
- 
  
         //checks sms is at least 1 char_from_digit
         if (!preg_match($RegExp_Sms, $_POST['serverSms'])){
